@@ -1,0 +1,32 @@
+{% extends 'shuttle/base.html' %}
+
+{% load static %}
+
+{% block title %} Events {% endblock %}
+
+
+{% block body %} 
+<center>
+ {% for event in events %}
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <img src="{{event.cover_photo.url}}" class="img-fluid rounded-start"/>
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+        <h5 class="card-title">{{event.title}}</h5>
+        <p class="card-text">
+	   {{event.description}}
+        </p>
+	  <a href="{% url 'pictorial' %}" class="btn btn-dark">View all</a>
+      </div>
+    </div>
+  </div>
+</div>
+ {% endfor %}
+</center>
+
+{% endblock %}
+
+

@@ -1,0 +1,26 @@
+{% extends 'shuttle/base.html' %}
+
+{% load static %}
+
+{% block title %} Magazine {% endblock %}
+
+{% block body %}
+
+            <center>
+              <div id="viewer" style="width: 98vw; height: 80vh;"></div>
+              <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
+              <script>
+                const config = { 
+                  documentId: '7184aa11-92ff-4000-8da4-f5699af04913',
+                  darkMode: true, 
+                  appBarColored: true,
+                  themeColor: '#452f17',
+                };
+                CloudPDF(config, document.getElementById('viewer')).then((instance) => {
+                  
+                });
+              </script>
+            </center> 
+            
+{% endblock %}
+

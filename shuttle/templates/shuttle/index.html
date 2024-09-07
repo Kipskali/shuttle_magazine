@@ -1,0 +1,20 @@
+{% extends 'shuttle/base.html' %}
+
+{% load static %}
+
+{% block title %} The Shuttle Magazine {% endblock %}
+        
+{% block body %}
+            <header class="py-5">
+                <center>
+                    <img style="  width: 25vw; height: 25vw; display: inline-block; border-radius: 50%;" src="{% static 'shuttle/assets/profile.jpeg' %}" alt="..." />
+                </center>
+                <div class="text-center text-xxl-start">
+                    <div class="fs-3 fw-light text-muted">The 78th edition of the Shuttle Magazine</div>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+                        <a class="btn btn-primary btn-lg " href="/magazine">Magazine</a>
+                        <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="/events">Events</a>
+                    </div>
+                </div>
+            </header>
+{% endblock %}
